@@ -36,7 +36,7 @@
     /// 将无声mp4与aac音轨合并组成有声视频
     /// 比如youtube很多音视频就是需要分轨下载 需要对视频和音频合并才得到完整文件
     [MediaUtils muxMp4WithVideo:videoStream Audio:audioStream to:outputPath Complete:^(NSInteger code) {
-       
+        
         if (code != 0) {
             [self insertLog:@"文件合并失败"];
             return;
@@ -94,8 +94,9 @@
 #pragma mark - log
 -(void)insertLog:(NSString *)text{
     
+    /// 插入行
     [self.outputLog insertText:[NSString stringWithFormat:@"\n%@",text]];
-
+    /// 滚动到底部
     [_textView scrollRangeToVisible:NSMakeRange(_textView.text.length - 1, 1)];
 }
 
