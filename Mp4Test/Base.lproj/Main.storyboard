@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -67,13 +68,16 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYs-hQ-qpz">
-                                <rect key="frame" x="352" y="44" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYs-hQ-qpz">
+                                <rect key="frame" x="359" y="44" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="7sN-IH-djg"/>
+                                    <constraint firstAttribute="height" constant="40" id="Dr8-yw-0Sw"/>
+                                    <constraint firstAttribute="width" constant="40" id="dgo-zo-gc4"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="labelColor"/>
-                                <state key="normal" title="Button" image="arrow.clockwise" catalog="system"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="arrow.clockwise" catalog="system" renderingMode="original"/>
+                                </state>
                                 <connections>
                                     <action selector="resetAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qR0-Oo-Mdd"/>
                                 </connections>
@@ -83,17 +87,16 @@
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
                             <constraint firstItem="tEm-pM-pSr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0QZ-Xb-YZk"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SYs-hQ-qpz" secondAttribute="trailing" constant="32" id="3Nm-Lf-Omd"/>
                             <constraint firstItem="AbG-pU-KhU" firstAttribute="top" secondItem="mzh-RZ-PL9" secondAttribute="bottom" constant="20" id="7Yj-gY-meQ"/>
                             <constraint firstItem="mzh-RZ-PL9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="CMA-P1-bgp"/>
                             <constraint firstItem="mzh-RZ-PL9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="126" id="RZQ-mk-XXv"/>
-                            <constraint firstItem="SYs-hQ-qpz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="352" id="SXo-qy-jTc"/>
                             <constraint firstItem="mzh-RZ-PL9" firstAttribute="leading" secondItem="AbG-pU-KhU" secondAttribute="leading" id="U96-dk-xD8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tEm-pM-pSr" secondAttribute="trailing" constant="12" id="XnK-dc-Yer"/>
                             <constraint firstItem="mzh-RZ-PL9" firstAttribute="trailing" secondItem="AbG-pU-KhU" secondAttribute="trailing" id="YEK-Fq-Hrh"/>
-                            <constraint firstItem="SYs-hQ-qpz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bdG-57-K8a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SYs-hQ-qpz" secondAttribute="trailing" constant="15" id="bfy-x0-2pC"/>
                             <constraint firstItem="tEm-pM-pSr" firstAttribute="top" secondItem="AbG-pU-KhU" secondAttribute="bottom" constant="42" id="mBA-0t-Bjp"/>
                             <constraint firstItem="mzh-RZ-PL9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mbm-q0-Azn"/>
+                            <constraint firstItem="SYs-hQ-qpz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ocP-Ll-iMu"/>
                             <constraint firstItem="tEm-pM-pSr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-10" id="trh-gb-Opn"/>
                         </constraints>
                     </view>
