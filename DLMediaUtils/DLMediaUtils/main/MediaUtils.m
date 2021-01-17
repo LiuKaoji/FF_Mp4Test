@@ -12,8 +12,6 @@
 @implementation MediaUtils
 
 +(void)muxMp4WithVideo:(NSString *)vPath Audio:(NSString *)aPath to:(NSString *)outPath Complete:(MediaUtilsBlock)complete{
-    
-    SetCallBackFun("开始合并视频...", fCallBack);
 
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
        
@@ -36,6 +34,11 @@
         });
     });
 }
+
++(void)runLogThread{
+    SetCallBackFun("", fCallBack);
+}
+
 
 void fCallBack(char *str)       // 应用者增加的函数，此函数会在A中被执行
 {

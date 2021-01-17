@@ -25,6 +25,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(recievedLog:) name:@"LOG_THREAD" object:nil];
     ///关闭log动画
     _textView.layoutManager.allowsNonContiguousLayout = NO;
+    ///开启一个Log线程
+    [MediaUtils runLogThread];
 }
 
 #pragma mark - mux

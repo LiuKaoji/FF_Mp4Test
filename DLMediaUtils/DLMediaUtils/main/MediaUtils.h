@@ -30,6 +30,8 @@ typedef void (^MediaUtilsBlock)(NSInteger code);
  */
 +(void)demuxAACFromMp4:(NSString *)vPath to:(NSString *)outPath Complete:(MediaUtilsBlock)complete;
 
++(void)runLogThread;
+
 @end
 
 NS_ASSUME_NONNULL_END
