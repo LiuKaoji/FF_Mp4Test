@@ -39,7 +39,7 @@ void* callback_thread(void *p1)//此处用的是一个线程
     parameter* p = (parameter*)p1 ;
     logParam = p;
     printf("GetCallBack print! \n");
-    p->callback(p->str);//函数指针执行函数，这个函数来自于应用层B
+    p->callback(p->str);//函数指针执行函数
     return  0;
 }
 
