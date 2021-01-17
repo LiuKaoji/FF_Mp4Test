@@ -40,7 +40,7 @@
 }
 
 
-void fCallBack(char *str)       // 应用者增加的函数，此函数会在A中被执行
+void fCallBack(char *str)
 {
     //do something
 //    printf("a = %s\n",str);
